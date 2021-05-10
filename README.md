@@ -16,10 +16,10 @@ License: You can freely use and modify this library for commercial purposes or n
 
 
 Changes 1.34:<br>
--Font + Addpage bug fixed
--Addpage does Underline
--Added Textwithrotation
--Added Textr , Textc
--removed UTF8 , it doesn't seems to work anymore - need help here
--Updated Version
--Header vritual need 1 Parameter Boolean --> Should the fontsize/Stype/underline,... be recovered?       
+-Font + Addpage bug fixed<br>
+-Addpage does Underline<br>
+-Added Textwithrotation<br>
+-Added Textr , Textc<br>
+-removed UTF8 , it doesn't seems to work anymore - need help here<br>
+-Updated Version<br>
+-Header vritual need 1 Parameter Boolean --> Should the fontsize/Stype/underline,... be recovered?<br>
