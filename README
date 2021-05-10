@@ -1,0 +1,94 @@
+This is version 1.34 Stable of the library "Free JPDF Pascal".
+
+Changes 1.34:
+-Font + Addpage bug fixed
+-Addpage does Underline
+-Added Textwithrotation
+-Added Textr , Textc
+-removed UTF8 , it doesn't seems to work anymore - need help here
+-Updated Version
+-Header vritual need 1 Parameter Boolean --> Should the fontsize/Stype/underline,... be recovered?
+
+New's in Version 1.33:
+- Added the method SetUTF8 to support UTF8. This method automatically 
+  applies the text function UTF8Decode. See the end of the second 
+  page of the PDF sample.
+
+New's in Version 1.32:
+	- Fixed definitely the mistake with the decimal point (especially on Windows);
+
+	- Some corrections were made for performance (speed of generation and memory usage) mentioned here in the forum. For example, were removed SetLength with very high initial values​​. Now were as follows:
+	   SetLength(Self.offsets, 3);
+	   SetLength(Self.pages, 1);
+	   SetLength(Self.OrientationChanges, 1);
+
+	The sample is generated in less than 240 milliseconds.
+
+	New methods have been present since version 1.31:
+
+	SaveToFile
+	SaveToStream
+	SaveToString
+	CreateContentStream(csToViewBrowser)
+	CreateContentStream(csToDownload)
+
+	The last two are for use in applications CGI with fcl-web or fp-web. Thus:
+
+	To view the Browser (Adobe plugin):
+
+	AResponse.ContentType := 'application/pdf';
+	AResponse.ContentStream := JPDF1.CreateContentStream(csToViewBrowser);
+
+	or simply:
+
+	AResponse.ContentType := 'application/pdf';
+	AResponse.ContentStream := JPDF1.CreateContentStream;
+
+	To download directly from the Browser:
+
+	AResponse.ContentType := 'application/x-download';
+	AResponse.ContentStream := JPDF1.CreateContentStream(csToDownload);
+
+---
+
+Resources:
+- Support Image (JPG or JPEG, PNG, GIF and BMP);
+- Support the main fonts (Helvetica [Arial], Times, Courier, Symbol and Zapfdingbats);
+- Support the styles (bold, italic and/or underline);
+- Various sizes of paper (A3, A4, A5, Legal and Letter);
+- Select unit of measure (pt, in, cm e mm);
+- Wrapping page or not;
+- Text with all types of alignment;
+- Power load a text file that is included in the PDF, with line breaks and page automatic (justified, left, right or center);
+- Write free text (in any position on the sheet);
+- Create tables with the Cell Method;
+- Support for line color, background and text;
+- Support for border line;
+- Possibility to change the orientation (portrait or landscape) of the pages in the same document;
+- Support compression (creates smaller PDF);
+- Methods to draw rectangles and lines;
+- Supports Headers and Footers (to use you need to create a child class, as well as the FPDF PHP);
+- Create barcodes (i25) for bank bills;
+
+New's in Version 1.2:
+- Fixed problem with method Code25 generated incorrect barcodes;
+
+New's in Version 1.1:
+- Fixed problem with underlining of irregular size;
+- Fixed problem with multicell underlined;
+- Fixed problem with text smaller than a multicell line;
+
+New's in Version 1.0 Stable:
+- The method fpdf moved to Create;
+- No need to call the Open after Create;
+- Use enumerators in various methods (Gilson Nunes);
+- Solved problem with the decimal point in Windows (Gilson Nunes);
+- Reduced the number of IF's (from the FPDF) due to the use of enumerators;
+- Some internal methods were removed because it became unnecessary;
+- Use variable names more readable;
+- Support for standard colors (cBlack, cSilver, cred, etc.);
+- Support underlined text (see example);
+- New method SetRightMargin;
+- New method SetUnderline;
+- New method Writer (Write the same as FPDF), lets you change the font style in the same paragraph (only left alignment);
+- New method Code25 to create barcodes for bank bills (see example);
