@@ -15,7 +15,7 @@ License: You can freely use and modify this library for commercial purposes or n
          provided you keep the credits to the author and his contributors.
 
 
-Changes 1.34:
+Changes 1.34:<br>
 -Font + Addpage bug fixed
 -Addpage does Underline
 -Added Textwithrotation
