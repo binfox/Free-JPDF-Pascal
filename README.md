@@ -2,6 +2,7 @@
 Based on the library FPDF written in PHP by Olivier PLATHEY and the Code25 method was based on PHP script created by Matthias Lau  
 
 Author: Jean Patrick - jpsoft-sac-pa@hotmail.com - www.jeansistemas.net
+
 Updated: Jan Lahr-Kuhnert jan@yourlahr.de
 
 Contribution: Gilson Nunes - Use of enumerators and resolved bug related to decimal point.
